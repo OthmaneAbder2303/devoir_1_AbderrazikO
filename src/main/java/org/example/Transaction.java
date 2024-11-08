@@ -1,14 +1,20 @@
 package org.example;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+
 import java.util.Date;
 import java.util.List;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.Expose;
+
 public class Transaction {
+    @Expose
     private final TransactionType type;
+    @Expose
     private final Date timeStamp;
+    @Expose
     private final String ref;
     @JsonManagedReference
     private final List<Compte> comptes;  // Keep the list but limit to 2 accounts
@@ -70,3 +76,4 @@ public class Transaction {
     }
 
 }
+
