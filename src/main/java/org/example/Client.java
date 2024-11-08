@@ -3,17 +3,23 @@ package org.example;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.Expose;
 
 import java.util.List;
 import java.util.ArrayList;
 
 public class Client {
-
-  private int NumClient;
+    @Expose
+    private int NumClient;
+    @Expose
     private String nom;
+    @Expose
     private String prenom;
+    @Expose
     private String adresse;
+    @Expose
     private String phone;
+    @Expose
     private String email;
     List<Compte> comptes;
 
@@ -157,3 +163,5 @@ public class Client {
         }
     }
 }
+
+
